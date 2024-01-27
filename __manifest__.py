@@ -10,6 +10,7 @@
         'security/land_project_security.xml',
         'security/ir.model.access.csv',
         'views/land_project_view.xml',
+        'views/land_activity_view.xml',
         'views/menu_list.xml',
     ],
     'installable': True,

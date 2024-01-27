@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="land_activity_tree">
+            <field name="name">land.activity.tree</field>
+            <field name="model">land.activity</field>
+            <field name="arch" type="xml">
+                <tree string="Land activity List">
+                    <field name="name"/>
+                    <field name="purpose"/>
+                    <field name="start_date"/>
+                    <field name="next_date"/>
+                    <field name="remarks"/>
+                    <field name="follow_up"/>
+                    <field name="communication_channel"/>
+                    <field name="next_communication_channel"/>
+                    <field name="state"/>
+
+                </tree>
+            </field>
+        </record>
+
+        <record id="land_activity_form_view" model="ir.ui.view">
+            <field name="name">land.activity.form</field>
+            <field name="model">land.activity</field>
+            <field name="arch" type="xml">
+                <form string="Land activity">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,cancel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="purpose"/>
+                                <field name="start_date"/>
+                                <field name="next_date"/>
+                                <field name="remarks"/>
+                                <field name="follow_up"/>
+                                <field name="communication_channel"/>
+                                <field name="next_communication_channel"/>
+
+                            </group>
+                        </group>
+                        
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="land_activity_form_action" model="ir.actions.act_window">
+            <field name="name">Land activity</field>
+            <field name="res_model">land.activity</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,kanban,form,pivot,graph,activity</field>
+            <field name="context">{}</field>
+        </record>
+
+    </data>
+</odoo>
+
+
