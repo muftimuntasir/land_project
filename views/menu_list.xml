@@ -3,10 +3,16 @@
     <data>
 
         <menuitem id="main_menu_land_project" name="Land Project" sequence="5"/>
+
         <menuitem id="menu_land_project" name="Land Project" action="land_project_form_action"
                   parent="main_menu_land_project" sequence="1"/>
-        <menuitem id="menu_land_activity" name="Activity" action="land_activity_form_action"
+
+
+        <menuitem id="menu_land_crm" name="Land CRM" action="land_crm_form_action"
                   parent="main_menu_land_project" sequence="2"/>
+
+        <menuitem id="menu_land_activity" name="Activity" action="land_activity_form_action"
+                  parent="main_menu_land_project" sequence="3"/>
 
     </data>
 </odoo>

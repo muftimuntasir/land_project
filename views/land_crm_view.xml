@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="land_crm_tree">
+            <field name="name">land.crm.tree</field>
+            <field name="model">land.crm</field>
+            <field name="arch" type="xml">
+                <tree string="Land CRM List">
+                    <field name="name"/>
+                    <field name="expected_revenue"/>
+                    <field name="probability"/>
+                    <field name="customer_id"/>
+                    <field name="email"/>
+                    <field name="phone"/>
+                    <field name="salesperson"/>
+                    <field name="expected_closing"/>
+                    <field name="medium"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="land_crm_form_view" model="ir.ui.view">
+            <field name="name">land.crm.form</field>
+            <field name="model">land.crm</field>
+            <field name="arch" type="xml">
+                <form string="Land CRM">
+                    <header>
+
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="expected_revenue"/>
+                                <field name="probability"/>
+                            </group>
+                            <group>
+                                <field name="customer_id"/>
+                                <field name="email"/>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="salesperson"/>
+                                <field name="expected_closing"/>
+                                <field name="tags"/>
+                            </group>
+                            <group>
+                                <field name="company_name"/>
+                                <field name="address"/>
+                                <field name="website"/>
+                                <field name="job_position"/>
+                                <field name="mobile"/>
+                            </group>
+                            <group>
+                                <field name="medium"/>
+                                <field name="source"/>
+                                <field name="referred_by"/>
+                            </group>
+                            <group>
+                                <field name="tracking"/>
+                                <field name="sales_team"/>
+                                <field name="days_to_assign"/>
+                                <field name="days_to_close"/>
+                            </group>
+                        </group>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="land_crm_form_action" model="ir.actions.act_window">
+            <field name="name">Land CRM</field>
+            <field name="res_model">land.crm</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,kanban,form,pivot,graph,activity</field>
+            <field name="context">{}</field>
+        </record>
+
+    </data>
+</odoo>
+
+
