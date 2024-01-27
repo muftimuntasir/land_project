@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_land_project,land.project,model_land_project,group_land_project_manager,1,1,1,0
+access_land_project_line,land.project.line,model_land_project_line,group_land_project_manager,1,1,1,0

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="land_project_tree">
+            <field name="name">land.project.tree</field>
+            <field name="model">land.project</field>
+            <field name="arch" type="xml">
+                <tree string="Land Project List">
+                    <field name="name"/>
+                    <field name="address"/>
+                    <field name="start_date"/>
+                    <field name="end_date"/>
+                    <field name="expected_cost"/>
+                    <field name="actual_cost"/>
+                    <field name="total_area"/>
+                    <field name="project_availability"/>
+                    <field name="state"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="land_project_form_view" model="ir.ui.view">
+            <field name="name">land.project.form</field>
+            <field name="model">land.project</field>
+            <field name="arch" type="xml">
+                <form string="Land Project">
+                    <header>
+                        <field name="state" widget="statusbar" statusbar_visible="draft,confirm,ongoing,cancel"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="address"/>
+                                <field name="start_date"/>
+                                <field name="end_date"/>
+                            </group>
+                            <group>
+                                <field name="expected_cost"/>
+                                <field name="actual_cost"/>
+                                <field name="total_area"/>
+                                <field name="project_availability"/>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Land Details" name="land_details">
+                                <field name="land_project_line_ids" mode="tree">
+                                    <tree string="Land Details" editable="bottom">
+                                        <field name="position_name"/>
+                                        <field name="minimum_sale_amount"/>
+                                        <field name="commission"/>
+                                        <field name="commission_amount"/>
+                                        <field name="assignee_person"/>
+                                        <field name="land_status"/>
+                                        <field name="project_state"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+
+                </form>
+            </field>
+        </record>
+
+        <record id="land_project_form_action" model="ir.actions.act_window">
+            <field name="name">Land Project</field>
+            <field name="res_model">land.project</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="view_mode">tree,kanban,form,pivot,graph,activity</field>
+            <field name="context">{}</field>
+        </record>
+
+    </data>
+</odoo>
+
+

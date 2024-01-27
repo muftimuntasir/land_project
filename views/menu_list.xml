@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+
+        <menuitem id="main_menu_land_project" name="Land Project" sequence="5"/>
+        <menuitem id="menu_land_project" name="Land Project" action="land_project_form_action"
+                  parent="main_menu_land_project" sequence="1"/>
+
+    </data>
+</odoo>
